@@ -1,0 +1,21 @@
+{
+  "name": "broccoli-example",
+  "description": "a sample broccoli app",
+  "main": "index.js",
+  "authors": [
+    "Oli Griffiths <oli.griffiths@me.com>"
+  ],
+  "license": "ISC",
+  "homepage": "",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "jquery": "^3.1.1"
+  }
+}
