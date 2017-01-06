@@ -11,7 +11,6 @@
   "devDependencies": {
     "broccoli": "^1.1.0",
     "broccoli-babel-transpiler": "^5.6.2",
-    "broccoli-browser-sync": "^1.0.1",
     "broccoli-concat": "^3.0.5",
     "broccoli-env": "0.0.1",
     "broccoli-funnel": "^1.1.0",
