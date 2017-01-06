@@ -1,28 +1,30 @@
 // Import broccoli modules
-var funnel = require('broccoli-funnel');
-var concat = require('broccoli-concat');
-var mergeTrees = require('broccoli-merge-trees');
-var babel = require('broccoli-babel-transpiler');
-var watchify = require('broccoli-watchify');
-var compileSass = require('broccoli-sass-source-maps');
-var env = require('broccoli-env').getEnv();
+const funnel = require('broccoli-funnel');
+const concat = require('broccoli-concat');
+const mergeTrees = require('broccoli-merge-trees');
+const babel = require('broccoli-babel-transpiler');
+const watchify = require('broccoli-watchify');
+const compileSass = require('broccoli-sass-source-maps');
+const Livereload = require('broccoli-livereload')
+const env = require('broccoli-env').getEnv();
 
 // Set the config options
-var srcDir = 'app';
-var srcJS = 'app.js';
-var srcSCSS = 'app.scss';
-var srcStylesDir = srcDir + '/styles';
-var outputAssetsDir = 'assets';
-var production = env === 'production';
+const srcDir = 'app';
+const srcJS = 'app.js';
+const srcSCSS = 'app.scss';
+const srcStylesDir = srcDir + '/styles';
+const outputAssetsDir = 'assets';
+const production = env === 'production';
 
 // Compile scss files
-var styles = compileSass([srcStylesDir], srcSCSS, outputAssetsDir + '/app.css', {
+let styles = compileSass([srcStylesDir], srcSCSS, outputAssetsDir + '/app.css', {
   sourceMap: !production,
+  sourceMapEmbed: true,
   sourceMapContents: true,
 });
 
 // Transpile js files into "node" modules
-var js = babel(srcDir);
+let js = babel(srcDir);
 
 // Package JS modules so they work in the browser
 js = watchify(js, {
@@ -35,9 +37,19 @@ js = watchify(js, {
 });
 
 // Copy the index.html file to the root out the output directory
-var html = funnel(srcDir, {
+let html = funnel(srcDir, {
   files   : ['index.html'],
   destDir : '/'
 });
 
-module.exports = mergeTrees([html, styles, js]);
+// Produce final tree
+let tree = mergeTrees([html, styles, js]);
+
+// Live reload files in dev
+if (!production) {
+  tree = new Livereload(tree, {
+    target: 'index.html',
+  });
+}
+
+module.exports = tree;

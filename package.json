@@ -11,9 +11,11 @@
   "devDependencies": {
     "broccoli": "^1.1.0",
     "broccoli-babel-transpiler": "^5.6.2",
+    "broccoli-browser-sync": "^1.0.1",
     "broccoli-concat": "^3.0.5",
     "broccoli-env": "0.0.1",
     "broccoli-funnel": "^1.1.0",
+    "broccoli-livereload": "^0.2.0",
     "broccoli-merge-trees": "^1.2.1",
     "broccoli-sass-source-maps": "^2.0.0",
     "broccoli-watchify": "^1.0.1"
