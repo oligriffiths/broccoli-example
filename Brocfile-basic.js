@@ -4,21 +4,18 @@ var concat = require('broccoli-concat');
 var mergeTrees = require('broccoli-merge-trees');
 var babel = require('broccoli-babel-transpiler');
 var watchify = require('broccoli-watchify');
-var compileSass = require('broccoli-sass-source-maps');
 var env = require('broccoli-env').getEnv();
 
-// Set the config options
+// Set the source directory
 var srcDir = 'app';
 var srcJS = 'app.js';
-var srcSCSS = 'app.scss';
-var srcStylesDir = srcDir + '/styles';
-var outputAssetsDir = 'assets';
+var srcCSS = 'app.css';
 var production = env === 'production';
 
-// Compile scss files
-var styles = compileSass([srcStylesDir], srcSCSS, outputAssetsDir + '/app.css', {
-  sourceMap: !production,
-  sourceMapContents: true,
+// Gather css files
+var styles = concat(srcDir, {
+  inputFiles : [srcCSS],
+  outputFile : 'assets/app.css'
 });
 
 // Transpile js files into "node" modules
@@ -28,9 +25,9 @@ var js = babel(srcDir);
 js = watchify(js, {
   browserify: {
     entries: ['./' + srcJS],
-    debug: !production,
+    debug: env !== 'production',
   },
-  outputFile: outputAssetsDir + '/app.js',
+  outputFile: 'assets/app.js',
   cache: true,
 });
 
