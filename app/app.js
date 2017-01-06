@@ -1,3 +1,3 @@
-import alert from './alert';
+import log from './log';
 
-alert();
+log('This is a sample Broccoli App');

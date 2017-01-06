@@ -10,6 +10,7 @@ const env = require('broccoli-env').getEnv();
 
 // Set the config options
 const srcDir = 'app';
+const publicDir = 'public';
 const srcJS = 'app.js';
 const srcSCSS = 'app.scss';
 const srcStylesDir = srcDir + '/styles';
@@ -44,6 +45,14 @@ let html = funnel(srcDir, {
 
 // Produce final tree
 let tree = mergeTrees([html, styles, js]);
+
+// Copy public folder
+let pub = funnel(publicDir, {
+  destDir: '/'
+});
+
+// Ensure app overwrites anything from public
+tree = mergeTrees([pub, tree], { overwrite: true });
 
 // Live reload files in dev
 if (!production) {
