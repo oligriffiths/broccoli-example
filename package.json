@@ -16,9 +16,9 @@
     "broccoli-funnel": "^1.1.0",
     "broccoli-livereload": "^0.2.0",
     "broccoli-merge-trees": "^1.2.1",
+    "broccoli-rollup": "^1.0.3",
     "broccoli-sass-source-maps": "^2.0.0",
     "broccoli-vendor": "^0.1.0",
-    "broccoli-watchify": "^1.0.1",
     "wiredep": "^4.0.0"
   }
 }
