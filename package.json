@@ -9,16 +9,18 @@
   "author": "",
   "license": "ISC",
   "devDependencies": {
-    "broccoli": "^1.1.0",
-    "broccoli-babel-transpiler": "^5.6.2",
-    "broccoli-concat": "^3.0.5",
+    "broccoli": "1.1.0",
+    "broccoli-babel-transpiler": "5.6.2",
+    "broccoli-concat": "3.0.5",
     "broccoli-env": "0.0.1",
-    "broccoli-funnel": "^1.1.0",
-    "broccoli-livereload": "^0.2.0",
-    "broccoli-merge-trees": "^1.2.1",
-    "broccoli-rollup": "^1.0.3",
-    "broccoli-sass-source-maps": "^2.0.0",
-    "broccoli-vendor": "^0.1.0",
-    "wiredep": "^4.0.0"
+    "broccoli-funnel": "1.1.0",
+    "broccoli-livereload": "0.2.0",
+    "broccoli-merge-trees": "1.2.1",
+    "broccoli-rollup": "1.0.3",
+    "broccoli-sass-source-maps": "2.0.0",
+    "broccoli-vendor": "0.1.0"
+  },
+  "dependencies": {
+    "jquery": "^3.2.1"
   }
 }
