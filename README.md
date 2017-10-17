@@ -9,7 +9,6 @@ there so here's an attempt to clarify some of that.
 
 ```
 npm install -g broccoli-cli
-npm install && bower install
 ```
 
 Then from the project directory:
