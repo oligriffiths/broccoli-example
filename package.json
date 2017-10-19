@@ -10,12 +10,12 @@
   "license": "ISC",
   "devDependencies": {
     "broccoli": "1.1.2",
-    "broccoli-babel-transpiler": "5.6.2",
-    "broccoli-concat": "3.0.5",
+    "broccoli-babel-transpiler": "^6.1.2",
+    "broccoli-concat": "^3.2.2",
     "broccoli-env": "0.0.1",
-    "broccoli-funnel": "1.1.0",
-    "broccoli-livereload": "0.2.0",
-    "broccoli-merge-trees": "1.2.1",
+    "broccoli-funnel": "^2.0.1",
+    "broccoli-livereload": "^1.2.1",
+    "broccoli-merge-trees": "^2.0.0",
     "broccoli-rollup": "1.0.3",
     "broccoli-sass-source-maps": "2.0.0",
     "broccoli-vendor": "0.1.0"
