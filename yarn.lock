@@ -609,9 +609,9 @@ broccoli-vendor@0.1.0:
   version "0.1.0"
   resolved "https://registry.yarnpkg.com/broccoli-vendor/-/broccoli-vendor-0.1.0.tgz#0f3f223f9270f607ddcfeac9e8ba32136305443c"
 
-broccoli@1.1.0:
-  version "1.1.0"
-  resolved "https://registry.yarnpkg.com/broccoli/-/broccoli-1.1.0.tgz#fa1242fd373e045cc0227aa37a5ab4a50b086beb"
+broccoli@1.1.2:
+  version "1.1.2"
+  resolved "https://registry.yarnpkg.com/broccoli/-/broccoli-1.1.2.tgz#9657bcee3b1e81f3a2fdbf6050355ba9163c7c11"
   dependencies:
     broccoli-node-info "1.1.0"
     broccoli-slow-trees "^2.0.0"
@@ -619,7 +619,7 @@ broccoli@1.1.0:
     commander "^2.5.0"
     connect "^3.3.3"
     copy-dereference "^1.0.0"
-    findup-sync "^0.4.2"
+    findup-sync "^1.0.0"
     handlebars "^4.0.4"
     heimdalljs-logger "^0.1.7"
     mime "^1.2.11"
@@ -1140,9 +1140,9 @@ find-up@^1.0.0:
     path-exists "^2.0.0"
     pinkie-promise "^2.0.0"
 
-findup-sync@^0.4.2:
-  version "0.4.3"
-  resolved "https://registry.yarnpkg.com/findup-sync/-/findup-sync-0.4.3.tgz#40043929e7bc60adf0b7f4827c4c6e75a0deca12"
+findup-sync@^1.0.0:
+  version "1.0.0"
+  resolved "https://registry.yarnpkg.com/findup-sync/-/findup-sync-1.0.0.tgz#6f7e4b57b6ee3a4037b4414eaedea3f58f71e0ec"
   dependencies:
     detect-file "^0.1.0"
     is-glob "^2.0.1"

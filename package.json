@@ -9,7 +9,7 @@
   "author": "",
   "license": "ISC",
   "devDependencies": {
-    "broccoli": "1.1.0",
+    "broccoli": "1.1.2",
     "broccoli-babel-transpiler": "5.6.2",
     "broccoli-concat": "3.0.5",
     "broccoli-env": "0.0.1",
