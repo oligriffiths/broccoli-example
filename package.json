@@ -4,6 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
+    "build": "rm -rf dist && broccoli build dist",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "",
@@ -16,7 +17,7 @@
     "broccoli-funnel": "^2.0.1",
     "broccoli-livereload": "^1.2.1",
     "broccoli-merge-trees": "^2.0.0",
-    "broccoli-rollup": "1.0.3",
+    "broccoli-rollup": "^1.3.0",
     "broccoli-sass-source-maps": "2.0.0",
     "broccoli-vendor": "0.1.0"
   },
